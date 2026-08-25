@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Riya Mahendra Ganjekar | Business Design Portfolio</title>
+
+    <meta name="description"
+          content="Riya Mahendra Ganjekar — PGDM Business Design | Strategy, Consulting, Marketing & Business Design">
+
+    <style>
+
+        /* =========================
+           GLOBAL
+        ========================== */
+
+        :root {
+            --navy: #10263d;
+            --navy-dark: #0a1929;
+            --gold: #b8862c;
+            --gold-light: #d4ad5f;
+            --cream: #f7f5ef;
+            --white: #ffffff;
+            --text: #263544;
+            --muted: #687482;
+            --line: #e7e2d8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: 0 auto;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(247, 245, 239, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-inner {
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.4px;
+            color: var(--navy);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+            font-size: 13px;
+            letter-spacing: 0.6px;
+        }
+
+        .nav-links a {
+            color: var(--muted);
+            transition: 0.25s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            padding: 100px 0 90px;
+            background:
+                radial-gradient(circle at 85% 20%, rgba(184,134,44,0.10), transparent 30%),
+                var(--cream);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid var(--gold-light);
+            border-radius: 999px;
+            color: var(--navy);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(46px, 6vw, 78px);
+            line-height: 0.98;
+            color: var(--navy);
+            max-width: 760px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero-lead {
+            font-size: 19px;
+            max-width: 650px;
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .hero-story {
+            font-size: 15px;
+            max-width: 650px;
+            color: #4f5c68;
+            margin-bottom: 34px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 21px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            transition: 0.25s;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--navy-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--navy);
+            color: var(--navy);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--navy);
+            color: white;
+        }
+
+        /* PHOTO PLACEHOLDER */
+
+        .photo-frame {
+            width: 100%;
+            max-width: 390px;
+            margin-left: auto;
+            position: relative;
+        }
+
+        .photo-frame::before {
+            content: "";
+            position: absolute;
+            inset: 18px -18px -18px 18px;
+            border: 1px solid var(--gold-light);
+            z-index: 0;
+        }
+
+        .photo-placeholder {
+            position: relative;
+            z-index: 1;
+            aspect-ratio: 4 / 5;
+            background:
+                linear-gradient(145deg, rgba(16,38,61,.96), rgba(16,38,61,.72)),
+                repeating-linear-gradient(
+                    45deg,
+                    rgba(255,255,255,0.03) 0,
+                    rgba(255,255,255,0.03) 2px,
+                    transparent 2px,
+                    transparent 9px
+                );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .photo-placeholder div {
+            color: white;
+        }
+
+        .photo-placeholder strong {
+            display: block;
+            color: var(--gold-light);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .photo-placeholder small {
+            color: #d9e0e7;
+            font-size: 12px;
+        }
+
+        /* =========================
+           SECTIONS
+        ========================== */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-label {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(34px, 4vw, 52px);
+            line-height: 1.1;
+            color: var(--navy);
+            margin-bottom: 18px;
+        }
+
+        .section-intro {
+            max-width: 720px;
+            color: var(--muted);
+            font-size: 16px;
+            margin-bottom: 42px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: #52606d;
+        }
+
+        .principles {
+            display: grid;
+            gap: 15px;
+        }
+
+        .principle {
+            border-left: 3px solid var(--gold);
+            padding: 13px 18px;
+            background: var(--cream);
+        }
+
+        .principle h3 {
+            color: var(--navy);
+            font-size: 15px;
+            margin-bottom: 3px;
+        }
+
+        .principle p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           EXPERIENCE
+        ========================== */
+
+        .experience {
+            background: var(--cream);
+        }
+
+        .timeline {
+            position: relative;
+            border-left: 1px solid #d9d2c5;
+            margin-left: 12px;
+        }
+
+        .experience-item {
+            position: relative;
+            padding: 0 0 50px 34px;
+        }
+
+        .experience-item::before {
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: 3px;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 2px solid var(--cream);
+        }
+
+        .experience-meta {
+            font-size: 11px;
+            color: var(--gold);
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .experience-item h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--navy);
+            font-size: 24px;
+            margin-bottom: 3px;
+        }
+
+        .experience-role {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .experience-item p {
+            color: #52606d;
+            max-width: 850px;
+        }
+
+        /* =========================
+           SELECTED WORK
+        ========================== */
+
+        .work {
+            background: white;
+        }
+
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .work-card {
+            border: 1px solid var(--line);
+            background: var(--cream);
+            padding: 28px;
+            transition: 0.25s;
+        }
+
+        .work-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold-light);
+            box-shadow: 0 12px 30px rgba(16,38,61,0.07);
+        }
+
+        .work-number {
+            color: var(--gold);
+            font-size: 11px;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .work-card h3 {
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--navy);
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .work-type {
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .work-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .work-link {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--navy);
+            letter-spacing: 0.7px;
+        }
+
+        .work-link:hover {
+            color: var(--gold);
+        }
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills {
+            background: var(--cream);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .skill-box {
+            background: white;
+            padding: 24px;
+            border: 1px solid var(--line);
+        }
+
+        .skill-box h3 {
+            color: var(--navy);
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .skill-box p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education {
+            background: white;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .education-card {
+            border: 1px solid var(--line);
+            padding: 25px;
+            background: var(--cream);
+        }
+
+        .education-year {
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .education-card h3 {
+            color: var(--navy);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 23px;
+            margin-bottom: 5px;
+        }
+
+        .education-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: var(--navy);
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-intro {
+            color: #c7d0d8;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            border: 1px solid rgba(255,255,255,0.25);
+            padding: 13px 18px;
+            color: white;
+            font-size: 13px;
+            transition: 0.25s;
+        }
+
+        .contact-link:hover {
+            border-color: var(--gold-light);
+            color: var(--gold-light);
+        }
+
+        footer {
+            background: var(--navy-dark);
+            color: #93a1ae;
+            padding: 18px 0;
+            font-size: 11px;
+            text-align: center;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-grid,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-frame {
+                margin: 20px auto 0;
+            }
+
+            .work-grid,
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            section {
+                padding: 65px 0;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+        <div class="container nav-inner">
+
+            <a class="brand" href="#home">
+                Riya Mahendra Ganjekar
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+                <li><a href="#work">WORK</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+
+    <header class="hero" id="home">
+
+        <div class="container hero-grid">
+
+            <div>
+
+                <div class="eyebrow">
+                    Business Design • Strategy • Marketing
+                </div>
+
+                <h1>
+                    Designing better
+                    <span>solutions</span>
+                    for complex problems.
+                </h1>
+
+                <p class="hero-lead">
+                    PGDM Business Design student at WeSchool, combining
+                    strategic thinking, consumer understanding, analytics
+                    and design thinking.
+                </p>
+
+                <p class="hero-story">
+                    My journey has taken me from architecture to business design,
+                    with a growing focus on understanding problems deeply,
+                    finding patterns in information and turning insights into
+                    practical business solutions.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#work" class="btn btn-primary">
+                        EXPLORE MY WORK
+                    </a>
+
+                    <a href="#contact" class="btn btn-outline">
+                        LET'S CONNECT
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO PLACEHOLDER -->
+
+            <div class="photo-frame">
+
+                <div class="photo-placeholder">
+
+                    <div>
+
+                        <strong>YOUR PHOTO</strong>
+
+                        <small>
+                            We will replace this with
+                            your professional photograph.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT -->
+
+    <section class="about" id="about">
+
+        <div class="container">
+
+            <div class="section-label">
+                ABOUT
+            </div>
+
+            <h2 class="section-title">
+                A designer who learned to think like a business strategist.
+            </h2>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I began with architecture, where I learned to understand
+                        people, constraints and systems before designing a solution.
+                    </p>
+
+                    <p>
+                        My PGDM in Business Design at WeSchool expanded that
+                        perspective into business — combining design thinking,
+                        strategy, consumer insights and analytics.
+                    </p>
+
+                    <p>
+                        Today, I enjoy working at the intersection of
+                        <strong>business problems, human behaviour and
+                        creative problem-solving.</strong>
+                    </p>
+
+                </div>
+
+
+                <div class="principles">
+
+                    <div class="principle">
+                        <h3>STRATEGIC THINKING</h3>
+                        <p>
+                            Breaking ambiguous problems into structured,
+                            answerable questions.
+                        </p>
+                    </div>
+
+                    <div class="principle">
+                        <h3>DESIGN THINKING</h3>
+                        <p>
+                            Understanding people and designing solutions
+                            around real needs.
+                        </p>
+                    </div>
+
+                    <div class="principle">
+                        <h3>ANALYTICAL MINDSET</h3>
+                        <p>
+                            Finding patterns in data and translating them
+                            into meaningful insights.
+                        </p>
+                    </div>
+
+                    <div class="principle">
+                        <h3>ACTION ORIENTATION</h3>
+                        <p>
+                            Turning analysis into practical recommendations
+                            and next steps.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section class="experience" id="experience">
+
+        <div class="container">
+
+            <div class="section-label">
+                EXPERIENCE
+            </div>
+
+            <h2 class="section-title">
+                Where I've worked
+            </h2>
+
+            <p class="section-intro">
+                Selected professional experience across market intelligence,
+                business analysis and design.
+            </p>
+
+
+            <div class="timeline">
+
+                <div class="experience-item">
+
+                    <div class="experience-meta">
+                        MAY — JULY 2026
+                    </div>
+
+                    <h3>Frost & Sullivan</h3>
+
+                    <div class="experience-role">
+                        Growth Opportunity Analytics Intern
+                    </div>
+
+                    <p>
+                        Analysed aftermarket growth opportunities across
+                        Agriculture, Construction and Mining equipment,
+                        benchmarking global OEMs and emerging technology
+                        trends to identify commercialisation, partnership
+                        and recurring-revenue opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <div class="experience-meta">
+                        NOV — DEC 2025
+                    </div>
+
+                    <h3>Acenti.ai</h3>
+
+                    <div class="experience-role">
+                        Business & Financial Analysis Intern
+                    </div>
+
+                    <p>
+                        Conducted B2B market research, customer segmentation,
+                        competitor benchmarking and pricing analysis to support
+                        positioning and go-to-market recommendations.
+                    </p>
+
+                </div>
+
+
+                <div class="experience-item">
+
+                    <div class="experience-meta">
+                        FEB — JUNE 2025
+                    </div>
+
+                    <h3>Dimensions Architects</h3>
+
+                    <div class="experience-role">
+                        Junior Architect
+                    </div>
+
+                    <p>
+                        Contributed to residential and commercial projects
+                        across concept development, spatial planning,
+                        feasibility analysis and technical documentation.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SELECTED WORK -->
+
+    <section class="work" id="work">
+
+        <div class="container">
+
+            <div class="section-label">
+                SELECTED WORK
+            </div>
+
+            <h2 class="section-title">
+                A few problems I've worked on.
+            </h2>
+
+            <p class="section-intro">
+                A curated selection of academic, professional and
+                strategy-focused work. Each project explores a different
+                way of understanding and solving a business problem.
+            </p>
+
+
+            <div class="work-grid">
+
+
+                <!-- NETFLIX -->
+
+                <div class="work-card">
+
+                    <div class="work-number">
+                        01 / STRATEGY
+                    </div>
+
+                    <h3>
+                        Netflix India
+                    </h3>
+
+                    <div class="work-type">
+                        Strategic Analysis
+                    </div>
+
+                    <p>
+                        Framed Netflix India's profitability challenge,
+                        diagnosed market and competitive drivers using
+                        structured frameworks, and prioritised strategic
+                        revenue, cost and monetisation levers.
+                    </p>
+
+                    <a class="work-link" href="#">
+                        VIEW CASE →
+                    </a>
+
+                </div>
+
+
+                <!-- PLINTH -->
+
+                <div class="work-card">
+
+                    <div class="work-number">
+                        02 / BUSINESS DESIGN
+                    </div>
+
+                    <h3>
+                        Plinth
+                    </h3>
+
+                    <div class="work-type">
+                        Business Model Design
+                    </div>
+
+                    <p>
+                        Identified fragmentation in the construction ecosystem
+                        and designed an asset-light platform model connecting
+                        clients, design professionals and trade partners.
+                    </p>
+
+                    <a class="work-link" href="#">
+                        VIEW CASE →
+                    </a>
+
+                </div>
+
+
+                <!-- FROST -->
+
+                <div class="work-card">
+
+                    <div class="work-number">
+                        03 / PROFESSIONAL
+                    </div>
+
+                    <h3>
+                        Frost & Sullivan
+                    </h3>
+
+                    <div class="work-type">
+                        Growth Opportunity Analytics
+                    </div>
+
+                    <p>
+                        Market intelligence and competitive benchmarking
+                        across the off-highway equipment aftermarket,
+                        translating research into growth opportunity insights.
+                    </p>
+
+                    <a class="work-link" href="#">
+                        VIEW WORK →
+                    </a>
+
+                </div>
+
+
+                <!-- JIOHOTSTAR -->
+
+                <div class="work-card">
+
+                    <div class="work-number">
+                        04 / MARKETING
+                    </div>
+
+                    <h3>
+                        JioHotstar
+                    </h3>
+
+                    <div class="work-type">
+                        Strategic Marketing Analysis
+                    </div>
+
+                    <p>
+                        Analysed consumer behaviour, market dynamics and
+                        competitive positioning to identify strategic marketing
+                        and growth opportunities.
+                    </p>
+
+                    <a class="work-link" href="#">
+                        VIEW CASE →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+
+        <div class="container">
+
+            <div class="section-label">
+                TOOLKIT
+            </div>
+
+            <h2 class="section-title">
+                How I work
+            </h2>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-box">
+
+                    <h3>
+                        STRATEGY
+                    </h3>
+
+                    <p>
+                        Market Research · Competitive Analysis ·
+                        Strategic Planning · Market Sizing · GTM
+                    </p>
+
+                </div>
+
+
+                <div class="skill-box">
+
+                    <h3>
+                        BUSINESS DESIGN
+                    </h3>
+
+                    <p>
+                        Business Models · Design Thinking ·
+                        User Insights · Innovation · Prototyping
+                    </p>
+
+                </div>
+
+
+                <div class="skill-box">
+
+                    <h3>
+                        MARKETING
+                    </h3>
+
+                    <p>
+                        Consumer Insights · Segmentation ·
+                        Brand Strategy · Digital Marketing
+                    </p>
+
+                </div>
+
+
+                <div class="skill-box">
+
+                    <h3>
+                        ANALYTICS & TOOLS
+                    </h3>
+
+                    <p>
+                        Excel · Power BI · Tableau · PowerPoint ·
+                        Figma · Canva
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="education" id="education">
+
+        <div class="container">
+
+            <div class="section-label">
+                EDUCATION
+            </div>
+
+            <h2 class="section-title">
+                Academic foundation
+            </h2>
+
+
+            <div class="education-grid">
+
+
+                <div class="education-card">
+
+                    <div class="education-year">
+                        2025 — 2027
+                    </div>
+
+                    <h3>
+                        PGDM — Business Design
+                    </h3>
+
+                    <p>
+                        Prin. L. N. Welingkar Institute of Management
+                        Development & Research
+                    </p>
+
+                    <p>
+                        CGPA: 8.13 / 10
+                    </p>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <div class="education-year">
+                        2019 — 2024
+                    </div>
+
+                    <h3>
+                        B.Arch
+                    </h3>
+
+                    <p>
+                        Sir J. J. College of Architecture
+                    </p>
+
+                    <p>
+                        CGPA: 7.95 / 10
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-label">
+                GET IN TOUCH
+            </div>
+
+            <h2 class="section-title">
+                Let's talk.
+            </h2>
+
+            <p class="section-intro">
+                Open to conversations around strategy, business design,
+                marketing and interesting business problems.
+            </p>
+
+            <div class="contact-links">
+
+                <a class="contact-link"
+                   href="mailto:YOUR_EMAIL_HERE">
+                    EMAIL →
+                </a>
+
+                <a class="contact-link"
+                   href="YOUR_LINKEDIN_URL_HERE"
+                   target="_blank">
+                    LINKEDIN →
+                </a>
+
+                <a class="contact-link"
+                   href="#">
+                    DOWNLOAD RESUME →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        © 2026 Riya Mahendra Ganjekar · Business Design Portfolio
+
+    </footer>
+
+</body>
+</html>
