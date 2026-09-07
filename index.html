@@ -555,6 +555,54 @@
             text-align: center;
         }
 
+                /* =========================
+           CERTIFICATIONS
+        ========================== */
+
+        .certifications {
+            background: white;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .certification-card {
+            background: var(--cream);
+            border: 1px solid var(--line);
+            padding: 24px 26px;
+            transition: 0.25s;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--gold-light);
+            box-shadow: 0 10px 24px rgba(16, 38, 61, 0.06);
+        }
+
+        .certification-year {
+            color: var(--gold);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .certification-card h3 {
+            color: var(--navy);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 20px;
+            line-height: 1.25;
+            margin-bottom: 6px;
+        }
+
+        .certification-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
         /* =========================
            RESPONSIVE
         ========================== */
@@ -574,10 +622,11 @@
                 margin: 20px auto 0;
             }
 
-            .work-grid,
-            .education-grid {
-                grid-template-columns: 1fr;
-            }
+           .work-grid,
+.education-grid,
+.certifications-grid {
+    grid-template-columns: 1fr;
+}
 
             .skills-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -629,6 +678,7 @@
                <li><a href="#work">SELECTED WORK</a></li>
                 <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#certifications">CERTIFICATIONS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
 
@@ -1167,8 +1217,93 @@ giving me a perspective that is both analytical and human-centred.
         </div>
 
     </section>
+<!-- CERTIFICATIONS -->
+
+<section class="certifications" id="certifications">
+
+    <div class="container">
+
+        <div class="section-label">
+            CERTIFICATIONS
+        </div>
+
+        <h2 class="section-title">
+            Credentials that complement my toolkit.
+        </h2>
+
+        <p class="section-intro">
+            Selected certifications and ongoing learning across finance,
+            analytics and business research.
+        </p>
+
+        <div class="certifications-grid">
+
+            <div class="certification-card">
+                <div class="certification-year">
+                    2025
+                </div>
+
+                <h3>
+                    Bloomberg Finance Fundamentals
+                </h3>
+
+                <p>
+                    Bloomberg
+                </p>
+            </div>
 
 
+            <div class="certification-card">
+                <div class="certification-year">
+                    2025
+                </div>
+
+                <h3>
+                    SEBI Investor Awareness Test
+                </h3>
+
+                <p>
+                    SEBI
+                </p>
+            </div>
+
+
+            <div class="certification-card">
+                <div class="certification-year">
+                    PURSUING
+                </div>
+
+                <h3>
+                    NISM Research Analyst
+                </h3>
+
+                <p>
+                    NISM
+                </p>
+            </div>
+
+
+            <div class="certification-card">
+                <div class="certification-year">
+                    PURSUING
+                </div>
+
+                <h3>
+                    Power BI Masterclass
+                </h3>
+
+                <p>
+                    Udemy
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    
     <!-- CONTACT -->
 
     <section class="contact" id="contact">
