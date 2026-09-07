@@ -103,7 +103,7 @@
         ========================== */
 
         .hero {
-            padding: 100px 0 90px;
+            padding: 85px 0 75px;
             background:
                 radial-gradient(circle at 85% 20%, rgba(184,134,44,0.10), transparent 30%),
                 var(--cream);
@@ -134,7 +134,7 @@
             font-size: clamp(46px, 6vw, 78px);
             line-height: 0.98;
             color: var(--navy);
-            max-width: 760px;
+            max-width: 850px;
             margin-bottom: 25px;
         }
 
@@ -143,7 +143,7 @@
         }
 
         .hero-lead {
-            font-size: 19px;
+            font-size: 17px;
             max-width: 650px;
             color: var(--muted);
             margin-bottom: 18px;
@@ -197,38 +197,34 @@
 
         .photo-frame {
             width: 100%;
-            max-width: 390px;
+            max-width: 420px;
             margin-left: auto;
             position: relative;
         }
 
-        .photo-frame::before {
-            content: "";
-            position: absolute;
-            inset: 18px -18px -18px 18px;
-            border: 1px solid var(--gold-light);
-            z-index: 0;
-        }
+      .photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 14px -14px -14px 14px;
+    border: 1px solid var(--gold-light);
+    z-index: 0;
+}
 
-        .photo-placeholder {
-            position: relative;
-            z-index: 1;
-            aspect-ratio: 4 / 5;
-            background:
-                linear-gradient(145deg, rgba(16,38,61,.96), rgba(16,38,61,.72)),
-                repeating-linear-gradient(
-                    45deg,
-                    rgba(255,255,255,0.03) 0,
-                    rgba(255,255,255,0.03) 2px,
-                    transparent 2px,
-                    transparent 9px
-                );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 30px;
-        }
+      .photo-placeholder {
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #e9e5dc;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+}
 
         .photo-placeholder div {
             color: white;
